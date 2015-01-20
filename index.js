@@ -6,21 +6,15 @@
  * A command line tool that gaze at your file changes and do a tiny-lr when needed
  */
 
-var watch = require('gaze');
-var livereload = require('tiny-lr');
+var opts = require('minimist')(process.argv.slice(2));
+var Wiper = require('./lib/wiper');
 
 // command line mode
 if (!module.parent) {
-	wiper();
+	factory(opts);
 }
 
-/**
- * Watch for file changes and refresh your browser tabs
- *
- * @return  Void
- */
-function wiper() {
-
-
-
+function factory(opts) {
+	var w = new Wiper(opts);
+	w.run();
 };

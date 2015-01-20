@@ -1,12 +1,10 @@
 {
   "name": "wiper",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A command line tool that gaze at your file changes and do a tiny-lr when needed",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/test.js",
-    "report": "istanbul cover _mocha -- -R spec test/test.js",
-    "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +29,7 @@
   "bin": "index.js",
   "dependencies": {
     "gaze": "^0.5.1",
+    "minimist": "^1.1.0",
     "tiny-lr": "^0.1.4"
   }
 }
