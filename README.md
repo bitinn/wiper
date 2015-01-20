@@ -41,7 +41,7 @@ app.use(livereload({
 or manually insert this into your template.
 
 ```
-<script src="//localhost:1234/livereload.js"></script>
+<script src="//localhost:1234/livereload.js?snipver=1"></script>
 ```
 
 Now your browsers will be refreshed automatically. And see, no `grunt` or `gulp` needed.
