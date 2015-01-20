@@ -1,6 +1,6 @@
 {
   "name": "wiper",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A command line tool that gaze at your file changes and do a tiny-lr when needed",
   "main": "index.js",
   "scripts": {
