@@ -1,0 +1,36 @@
+{
+  "name": "wiper",
+  "version": "1.0.0",
+  "description": "A command line tool that gaze at your file changes and do a tiny-lr when needed",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js",
+    "report": "istanbul cover _mocha -- -R spec test/test.js",
+    "coverage": "istanbul cover _mocha --report lcovonly -- -R spec test/test.js && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitinn/wiper.git"
+  },
+  "keywords": [
+    "watch",
+    "livereload"
+  ],
+  "author": "David Frank",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitinn/wiper/issues"
+  },
+  "homepage": "https://github.com/bitinn/wiper",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.3.5",
+    "mocha": "^2.1.0"
+  },
+  "bin": "index.js",
+  "dependencies": {
+    "gaze": "^0.5.1",
+    "tiny-lr": "^0.1.4"
+  }
+}
