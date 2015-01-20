@@ -4,9 +4,14 @@ Changelog
 
 # 1.x release
 
-## v1.0.1 (pre-release)
+## v1.0.2
 
-- Fix: document
+- Fix: error handling
+- Fix: page refresh
+
+## v1.0.1
+
+- Fix: documents and tests
 
 ## v1.0.0
 
