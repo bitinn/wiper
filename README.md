@@ -30,12 +30,18 @@ In your `package.json`, add this script
 
 Now you have a livereload server running at `localhost:1234` that watches your updates to javascript files.
 
-To integrate with your koa/express server, use modules like `koa-livereload` or `connect-livereload`.
+To integrate with your koa/express server, use modules like `koa-livereload` or `connect-livereload`;
 
 ```
   app.use(livereload({
     port : 1234
   }));
+```
+
+or manually insert this into your template.
+
+```
+<script src="//localhost:1234/livereload.js"></script>
 ```
 
 Now your browsers will be refreshed automatically. And see, no `grunt` or `gulp` needed.
