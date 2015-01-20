@@ -5,7 +5,7 @@ wiper
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 
-A command line tool that `gaze` at your file changes and do a `tiny-lr` when needed.
+A command line tool that `[gaze](https://github.com/shama/gaze)` at your file changes and do a `[tiny-lr](https://github.com/mklabs/tiny-lr)` when needed.
 
 
 # Motivation
@@ -15,36 +15,38 @@ Demonstrate just how easy it is to extend a livereload server with file watcher 
 
 # Install
 
-`npm install wiper --save-dev`
+`npm install wiper --save-dev` or `npm install -g wiper`
 
 
 # Usage
 
 In your `package.json`, add this script
 
-```
-"scripts": {
-	"watch": "wiper -p 1234 -w **/*.js"
+```json
+{
+	"scripts": {
+		"watch": "wiper -p 1234 -w **/*.js,**/*.css"
+	}
 }
 ```
 
-Now try `npm run watch`, a livereload server will be running at `localhost:1234` and watching your updates to javascript files.
+Now try `npm run watch`, a livereload server will be running at `localhost:1234` and watching your updates to javascript/css files.
 
-To integrate with your koa/express server, use modules like `koa-livereload` or `connect-livereload`;
+To integrate with your koa/express server, use modules like `[koa-livereload](https://github.com/yosuke-furukawa/koa-livereload)` or `[connect-livereload](https://github.com/intesso/connect-livereload)`.
 
-```
+```javascript
 app.use(livereload({
 	port : 1234
 }));
 ```
 
-or manually insert this into your template.
+Or manually insert this line onto your template.
 
-```
+```html
 <script src="//localhost:1234/livereload.js?snipver=1"></script>
 ```
 
-Now your browsers will be refreshed automatically. And see, no `grunt` or `gulp` needed.
+Now your browsers will be refreshed automatically when file change occurs. And see, no `grunt` or `gulp` needed, just `npm`.
 
 
 # License
