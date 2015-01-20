@@ -23,19 +23,19 @@ Demonstrate just how easy it is to extend a livereload server with file watcher 
 In your `package.json`, add this script
 
 ```
-  "scripts": {
-    "watch": "wiper -p 1234 -w **/*.js"
-  }
+"scripts": {
+	"watch": "wiper -p 1234 -w **/*.js"
+}
 ```
 
-Now you have a livereload server running at `localhost:1234` that watches your updates to javascript files.
+Now try `npm run watch`, a livereload server will be running at `localhost:1234` and watching your updates to javascript files.
 
 To integrate with your koa/express server, use modules like `koa-livereload` or `connect-livereload`;
 
 ```
-  app.use(livereload({
-    port : 1234
-  }));
+app.use(livereload({
+	port : 1234
+}));
 ```
 
 or manually insert this into your template.
