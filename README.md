@@ -5,7 +5,7 @@ wiper
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 
-A command line tool that [gaze](https://github.com/shama/gaze) at your file changes and do a [tiny-lr](https://github.com/mklabs/tiny-lr) when needed.
+A command line tool that [gaze](https://github.com/shama/gaze) at your file changes and do a [tiny-lr](https://github.com/mklabs/tiny-lr) when needed (compatible with both node.js and io.js).
 
 
 # Motivation
