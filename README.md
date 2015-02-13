@@ -25,7 +25,7 @@ In your `package.json`, add this script
 ```json
 {
 	"scripts": {
-		"watch": "wiper -p 1234 -w **/*.js,**/*.css"
+		"watch": "DEBUG=wiper wiper -p 1234 -w **/*.js,**/*.css"
 	}
 }
 ```
