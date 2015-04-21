@@ -3,7 +3,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-var Gaze = require('gaze').Gaze;
+var Chokidar = require('chokidar').FSWatcher;
 var TinyLR = require('tiny-lr').Server;
 
 // test subject
@@ -19,10 +19,12 @@ describe('wiper', function() {
 	});
 
 	it('should setup custom options', function() {
-		var w = new Wiper({ w: 'a,b', p: 1234, q: true });
+		var w = new Wiper({ w: 'a,b', p: 1234, q: true, cert: 'ssl.crt', key: 'ssl.key' });
 		expect(w.opts.w).to.deep.equal(['a', 'b']);
 		expect(w.opts.p).to.equal(1234);
 		expect(w.opts.q).to.be.true;
+		expect(w.opts.cert).to.equal('ssl.crt');
+		expect(w.opts.key).to.equal('ssl.key');
 	});
 
 	it('should setup livereload server and watch files', function(done) {
@@ -30,8 +32,7 @@ describe('wiper', function() {
 		w.run(function() {
 			expect(w.server.port).to.equal(1234);
 			expect(w.server).to.be.instanceof(TinyLR);
-			expect(w.watcher._patterns).to.contain('a');
-			expect(w.watcher).to.be.instanceof(Gaze);
+			expect(w.watcher).to.be.instanceof(Chokidar);
 			done();
 		});
 	});

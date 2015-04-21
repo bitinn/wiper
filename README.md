@@ -5,12 +5,12 @@ wiper
 [![npm version][npm-image]][npm-url]
 [![build status][travis-image]][travis-url]
 
-A command line tool that [gaze](https://github.com/shama/gaze) at your file changes and do a [tiny-lr](https://github.com/mklabs/tiny-lr) when needed (compatible with both node.js and io.js).
+A command line tool that [watch](https://github.com/paulmillr/chokidar) file changes and do a [livereload](https://github.com/mklabs/tiny-lr) when needed (compatible with both node.js and io.js).
 
 
 # Motivation
 
-Demonstrate just how easy it is to extend a livereload server with file watcher capability.
+Allow us to use `npm` as our build tool instead of `grunt` or `gulp`.
 
 
 # Install
