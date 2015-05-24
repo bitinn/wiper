@@ -4,7 +4,11 @@ Changelog
 
 # 1.x release
 
-## v1.1.0 (master)
+## v1.1.1 (master)
+
+- Fix: wiper error should exit with code 1
+
+## v1.1.0
 
 - Feature: use chokidar instead of gaze
 - Feature: added https support
