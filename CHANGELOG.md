@@ -8,7 +8,7 @@ Changelog
 
 - Workaround: throttle livereload (wait 5 seconds)
 
-## v1.1.1 (master)
+## v1.1.1
 
 - Fix: wiper error should exit with code 1
 
