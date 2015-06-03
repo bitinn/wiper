@@ -4,6 +4,10 @@ Changelog
 
 # 1.x release
 
+## v1.2.0 (master)
+
+- Workaround: throttle livereload (wait 5 seconds)
+
 ## v1.1.1 (master)
 
 - Fix: wiper error should exit with code 1
