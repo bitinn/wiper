@@ -25,7 +25,7 @@ In your `package.json`, add these lines.
 ```json
 {
 	"scripts": {
-		"watch": "DEBUG=wiper wiper -p 1234 -w \\*\\*/\\*.js,\\*\\*/\\*.css"
+		"watch": "DEBUG=wiper wiper -p 1234 -t 2000 -w \\*\\*/\\*.js,\\*\\*/\\*.css"
 	}
 }
 ```
@@ -35,9 +35,10 @@ Now try `npm run watch`, a livereload server will be running at `localhost:1234`
 
 ## Options
 
-- `-p` port to listen on
-- `-w` file changes to watch; note that you should use `\*` to prevent bash from expanding globs, as we want wiper to expand it instead, also see that we double escape `\\*` in package.json due to additional string escapes.
-- `--cert=ssl.crt` and `--key=ssl.key` to start livereload server on https, generate your self-signed certificate and import them into your trusted store to work.
+- `-p` port to listen on, default to 35729.
+- `-t` debounce timeout, default to 5000ms.
+- `-w` files to watch; note that you should use `\*` to prevent bash from expanding globs, as we want wiper to expand it instead, also see that we double escape `\\*` in package.json due to additional string escapes.
+- `--cert=ssl.crt` and `--key=ssl.key` to start livereload server on https, generate your self-signed certificate and import them into your CA trust store for this to work.
 
 
 ## Integration

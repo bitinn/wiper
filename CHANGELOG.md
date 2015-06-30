@@ -4,7 +4,13 @@ Changelog
 
 # 1.x release
 
-## v1.2.0 (master)
+## v1.3.0 (master)
+
+- Feature: change from throttle to debounce to prevent duplicate event
+- Feature: add timeout parameter for debounce
+- Remove: un-used quiet parameter, we are quiet by default
+
+## v1.2.0
 
 - Workaround: throttle livereload (wait 5 seconds)
 
